@@ -43,11 +43,12 @@ public class FootballMatch implements Match, Comparable<FootballMatch> {
     public void updateScore(int homeTeamScore, int awayTeamScore) {
         if (homeTeamScore >= 0 && awayTeamScore >= 0) {
             if (homeTeamScore >= this.homeTeamScore && awayTeamScore >= this.awayTeamScore) {
-                if (homeTeamScore - this.homeTeamScore <= 1 && awayTeamScore - this.awayTeamScore <= 1) {
+                if ((homeTeamScore == this.homeTeamScore + 1 && awayTeamScore == this.awayTeamScore)
+                        || (homeTeamScore == this.homeTeamScore && awayTeamScore == this.awayTeamScore + 1)) {
                     this.homeTeamScore = homeTeamScore;
                     this.awayTeamScore = awayTeamScore;
                 } else {
-                    throw new IllegalArgumentException("Score value can only be increased by 1");
+                    throw new IllegalArgumentException("Score value can only be increased by 1 for one team at a time");
                 }
             } else {
                 throw new IllegalArgumentException("Score value cannot be decreased");

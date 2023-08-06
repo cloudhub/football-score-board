@@ -40,6 +40,13 @@ class FootballMatchTest {
     }
 
     @Test
+    void testUpdateScoreWithOnePointForEachTeamThenThrowException() {
+        FootballMatch match = new FootballMatch("Canada", "Brazil");
+
+        assertThrows(IllegalArgumentException.class, () -> match.updateScore(1, 1));
+    }
+
+    @Test
     void testUpdateScoreWhenDecreaseValueThenThrowException() {
         FootballMatch match = new FootballMatch("Canada", "Brazil");
         match.updateScore(1, 0);

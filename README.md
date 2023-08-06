@@ -15,4 +15,4 @@ Provide the implementation of the Live Football World Cup Score Board
 We assume that after football match initialization:
 1. score value cannot be negative
 2. score value cannot be decreased
-3. score value can only be sequentially increased by 1
+3. score value can only be sequentially increased by 1 for one team at a time
