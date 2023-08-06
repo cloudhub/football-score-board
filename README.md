@@ -19,4 +19,4 @@ We assume that after football match initialization:
 4. each match starts with some delay, so we can always distinguish which is the most recent
 
 ## Notes
-Please none that ```showOngoingMatches(List<Match> matches)``` method added just to print results in the console.
+Please note that ```showOngoingMatches(List<Match> matches)``` method added just to print results in the console.
