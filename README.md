@@ -16,3 +16,7 @@ We assume that after football match initialization:
 1. score value cannot be negative
 2. score value cannot be decreased
 3. score value can only be sequentially increased by 1 for one team at a time
+4. each match starts with some delay, so we can always distinguish which is the most recent
+
+## Notes
+Please none that ```showOngoingMatches(List<Match> matches)``` method added just to print results in the console.
